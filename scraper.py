@@ -44,3 +44,6 @@ with open("csv_data.csv", "w", encoding="utf-8") as f:
     writer = csv.DictWriter(f, fieldnames = ["title", "currency", "price"])
     writer.writeheader()
     writer.writerows(book)
+
+with open("json_data.json", "w", encoding="utf_8") as f:
+    json.dump(book, f, ensure_ascii=False, indent=4)
